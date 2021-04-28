@@ -1,16 +1,60 @@
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.swiper-container {
+  width: 1240px;
+  height: 450px;
+  margin: 5rem auto;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.swiper-container .swiper-button-prev {
+  color: #ffba08;
+  left: 42.5px;
+  right: auto;
 }
 
-* {
-  box-sizing: border-box;
-} */
+.swiper-container .swiper-button-next {
+  color: #ffba08;
+  right: 42.5px;
+  left: auto;
+}
+
+.swiper-pagination {
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #999999;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffba08;
+}
+
+.swiper-wrapper {
+  padding-inline-start: 0;
+}
+
+@media (max-width: 414px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .swiper-container {
+    width: 414px;
+    height: 280px;
+    margin: 2rem auto;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 2.5rem;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
