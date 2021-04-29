@@ -7,6 +7,7 @@ const BannerOne = () => {
       as="section"
       bgImage="url('images/HomeBannerBackground.jpg')"
       bgPosition="center"
+      bgSize='cover'
       bgRepeat="no-repeat"
       h={['163px', '335px']}
     >
