@@ -18,7 +18,7 @@ import NumberAndText from '../../components/smallChakra/NumberAndText';
 
 import { server } from '../../config';
 
-import { Continent } from '../../data';
+import { Continent, continents } from '../../data';
 
 interface ContinentPageProps {
   continent: Continent;
@@ -122,8 +122,8 @@ export default function ContinentPage({ continent }: ContinentPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(`${server}/api/continents`);
-  const continents = await res.json();
+  // const res = await fetch(`${server}/api/continents`);
+  // const continents = await res.json();
 
   const paths = continents.map((continent: Continent) => ({
     params: { id: continent.id },
@@ -133,8 +133,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const res = await fetch(`${server}/api/continents/${params?.id}`);
-  const continent = await res.json();
+  // const res = await fetch(`${server}/api/continents/${params?.id}`);
+  // const continent = await res.json();
+
+  const selectedContinent = continents.filter(continent => continent.id === params?.id);
+  const continent = selectedContinent[0];
 
   return {
     props: {
