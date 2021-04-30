@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Image } from '@chakra-ui/image';
 import { Box, Flex, Grid, Heading, Text } from '@chakra-ui/layout';
 import {
@@ -6,11 +7,10 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverBody,
-  PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
 } from '@chakra-ui/react';
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 
 import BannerTwo from '../../components/BannerTwo';
 import Card from '../../components/Card';
@@ -27,6 +27,11 @@ interface ContinentPageProps {
 export default function ContinentPage({ continent }: ContinentPageProps) {
   return (
     <>
+      <Head>
+        <title>{continent.name}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <BannerTwo bannerImage={continent.bannerImage} name={continent.name} />
       <Grid
         as="section"
@@ -47,8 +52,8 @@ export default function ContinentPage({ continent }: ContinentPageProps) {
         <Grid
           gridTemplateColumns={['13.2rem 13.2rem 1fr', 'repeat(3, 15.8rem)']}
           justifyItems="start"
-          alignItems={["start", "center"]}
-          m={["0 3rem 3rem 3rem", "0 0"]}
+          alignItems={['start', 'center']}
+          m={['0 3rem 3rem 3rem', '0 0']}
         >
           <NumberAndText
             numberOfCountries={continent.numberOfCountries}
@@ -69,7 +74,7 @@ export default function ContinentPage({ continent }: ContinentPageProps) {
                   cursor="pointer"
                   src="/images/icons/info.svg"
                   p="0 0 7px 7px"
-                  w={["1.9rem", "2.3rem"]}
+                  w={['1.9rem', '2.3rem']}
                 />
               </PopoverTrigger>
               <PopoverContent fontSize="1.65rem">
