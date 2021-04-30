@@ -27,10 +27,19 @@ export default function Header() {
             alt="Arrow pointing to the left"
             width={['7px', '14px']}
             height={['14px', '28px']}
+            transition="filter 0.2s"
+            _hover={{ filter: 'opacity(65%)' }}
           />
         </Link>
       )}
-      <Image src="/images/Logo.svg" alt="Picture" width={[81, 184.06]} />
+      <Link href={`/`}>
+        <Image
+          cursor="pointer"
+          src="/images/Logo.svg"
+          alt="Picture"
+          width={[81, 184.06]}
+        />
+      </Link>
     </Flex>
   );
 }
