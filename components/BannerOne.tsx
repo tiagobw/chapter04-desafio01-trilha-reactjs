@@ -1,5 +1,5 @@
+import { Image } from '@chakra-ui/image';
 import { Box, Flex, Heading, Text } from '@chakra-ui/layout';
-import Image from 'next/image';
 
 const BannerOne = () => {
   return (
@@ -7,7 +7,7 @@ const BannerOne = () => {
       as="section"
       bgImage="url('images/HomeBannerBackground.jpg')"
       bgPosition="center"
-      bgSize='cover'
+      bgSize="cover"
       bgRepeat="no-repeat"
       h={['163px', '335px']}
     >
@@ -25,7 +25,7 @@ const BannerOne = () => {
             lineHeight={['3rem', '5.4rem']}
             fontSize={['2rem', '3.6rem']}
             color="light.500"
-            mb={["0.8rem", "3.4rem"]}
+            mb={['0.8rem', '3.4rem']}
           >
             5 Continentes,
             <br /> infinitas possibilidades.
@@ -40,12 +40,7 @@ const BannerOne = () => {
           </Text>
         </Box>
         <Box mt="10rem" display={['none', 'block']}>
-          <Image
-            src="/images/Airplane.svg"
-            alt="Airplane"
-            width={417}
-            height={270.74}
-          />
+          <Image src="/images/Airplane.svg" alt="Airplane" />
         </Box>
       </Flex>
     </Box>

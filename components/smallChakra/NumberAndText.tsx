@@ -11,7 +11,11 @@ export default function NumberAndText({
 }: NumberAndTextProps) {
   return (
     <>
-      <Flex flexDirection="column" justifyContent="center" alignItems="center">
+      <Flex
+        flexDirection="column"
+        justifyContent="center"
+        alignItems={['flex-start', 'center']}
+      >
         <Heading
           as="h2"
           fontSize="4rem"
@@ -22,8 +26,8 @@ export default function NumberAndText({
           {numberOfCountries}
         </Heading>
         <Text
-          fontSize="2rem"
-          fontWeight="600"
+          fontSize={["1.7rem", "2rem"]}
+          fontWeight={["400", "600"]}
           lineHeight="3rem"
           color="dark.700"
         >

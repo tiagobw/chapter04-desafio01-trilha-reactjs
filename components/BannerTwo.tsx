@@ -34,20 +34,20 @@ const BannerOne = ({ name, bannerImage }: BannerOneProps) => {
         justifyContent="space-between"
         margin="0 auto"
       >
-        <Box>
-          <Heading
-            position="absolute"
-            bottom="30px"
-            as="h2"
-            fontWeight="600"
-            lineHeight={['3rem', '7.2rem']}
-            fontSize={['2rem', '4.8rem']}
-            color="light.500"
-            mb={['0.8rem', '3.4rem']}
-          >
-            {name}
-          </Heading>
-        </Box>
+        <Heading
+          position="absolute"
+          bottom={['auto', '6rem']}
+          left={['50%', 'auto']}
+          top={['50%', 'auto']}
+          transform={['translate(-50%, -50%)', 'translate(0, 0)']}
+          as="h2"
+          fontWeight="600"
+          lineHeight={['4.8rem', '7.2rem']}
+          fontSize={['3rem', '4.8rem']}
+          color="light.500"
+        >
+          {name}
+        </Heading>
       </Flex>
     </Box>
   );

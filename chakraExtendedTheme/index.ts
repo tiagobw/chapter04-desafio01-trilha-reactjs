@@ -5,6 +5,9 @@ import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 
+import "@fontsource/barlow/500.css"
+import "@fontsource/barlow/600.css"
+
 const colors = {
   light: {
     900: '#DADADA',

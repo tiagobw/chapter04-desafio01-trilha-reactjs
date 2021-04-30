@@ -36,6 +36,7 @@ export const TravelTypes = () => {
     <Grid
       w={['275px', '1160px']}
       gridTemplateColumns={['repeat(2, 1fr)', 'repeat(5, 1fr)']}
+      gridColumnGap={["0", "6rem"]}
       margin={['4rem auto 0 auto', '11.4rem auto 0 auto']}
     >
       {travelTypes.map(({ icon, text }, index) => (
